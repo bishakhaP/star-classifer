@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Classifier</title>
+  </head>
+  <body>
+    <div>
+      <h2>Star Classifier</h2>
+
+      <div>
+        <label for="B_V">B–V Color Index</label>
+
+        <input type="range" id="B_V" min="0" max="2" step="0.1" value="1" />
+        <span id="bvVal">1.0</span>
+      </div>
+
+      <div>
+        <label for="Amag">Absolute Magnitude (Amag)</label>
+        <input type="range" id="Amag" min="10" max="20" step="0.1" value="15" />
+        <span id="amagVal">15.0</span>
+      </div>
+
+      <div>
+        <label for="Plx">Parallax (mas)</label>
+        <input type="range" id="Plx" min="0" max="10" step="0.1" value="5" />
+        <span id="plxVal">5.0</span>
+      </div>
+
+      <button onclick="predict()">Classify Star</button>
+
+      <h3 id="result"></h3>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
