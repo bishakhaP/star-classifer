@@ -15,28 +15,69 @@
       <h2>Star Classifier</h2>
 
       <div class="input-group">
-        <label for="B_V">B–V Color Index</label>
+        <label for="B_V">
+            B–V Color Index
+            <div class="tooltip-text">
+                Indicates a star’s surface temperature using its color.<br>
+                Lower values → hotter, bluer stars<br>
+                Higher values → cooler, redder stars
+            </div>
+        </label>
         <div class="slider-container">
-          <input type="range" id="B_V" min="0" max="2" step="0.1" value="1" />
+            <span class="slider-label hot">Hot</span>
+            <input type="range" id="B_V" min="0" max="2" step="0.1" value="1" />
+            <span class="slider-label cool">Cool</span>
         </div>
         <span id="bvVal">1.0</span>
       </div>
 
       <div class="input-group">
-        <label for="Amag">Absolute Magnitude (Amag)</label>
-        <input type="range" id="Amag" min="10" max="20" step="0.1" value="15" />
+        <label for="Amag">
+            Absolute Magnitude (Amag)
+            <div class="tooltip-text">
+                Measures a star’s true brightness if it were placed at a fixed distance.<br>
+                Lower values → brighter stars<br>
+                Higher values → dimmer stars
+            </div>
+        </label>
+        <div class="slider-container">
+            <span class="slider-label bright">Bright</span>
+            <input type="range" id="Amag" min="10" max="20" step="0.1" value="15" />
+            <span class="slider-label dim">Dim</span>
+        </div>
         <span id="amagVal">15.0</span>
       </div>
 
       <div class="input-group">
-        <label for="Plx">Parallax (mas)</label>
-        <input type="range" id="Plx" min="0" max="10" step="0.1" value="5" />
+        <label for="Plx">
+            Parallax (mas)
+            <div class="tooltip-text">
+                Apparent shift of a star due to Earth’s orbit around the Sun.<br>
+                Larger values → closer stars<br>
+                Smaller values → farther stars
+            </div>
+        </label>
+        <div class="slider-container">
+            <span class="slider-label far">Far</span>
+            <input type="range" id="Plx" min="0" max="10" step="0.1" value="5" />
+            <span class="slider-label near">Near</span>
+        </div>
         <span id="plxVal">5.0</span>
       </div>
 
       <button onclick="predict()">Classify Star</button>
 
       <h3 id="result"></h3>
+
+      <div class="info-card">
+        <h4>How the model decides?</h4>
+        <p>
+            The classifier uses stellar color (temperature), intrinsic brightness, and parallax (which indicates distance) to estimate whether a star is a giant or dwarf.
+        </p>
+        <p class="note">
+            The output is a probability, not a certainty.
+        </p>
+      </div>
     </div>
 
     <script src="/static/script.js"></script>

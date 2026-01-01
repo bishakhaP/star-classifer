@@ -41,6 +41,48 @@ label {
     color: #a0a0a0;
     text-align: left;
     margin-bottom: 0.5rem;
+    position: relative;
+    cursor: help;
+    width: fit-content;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 250px;
+    background: rgba(7, 1, 29, 0.8);
+    backdrop-filter: blur(5px);
+    color: #fff;
+    text-align: left;
+    border-radius: 8px;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    font-weight: normal;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(10, 6, 30, 0.8) transparent transparent transparent;
+}
+
+label:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -83,6 +125,37 @@ input[type=range]::-webkit-slider-runnable-track {
     font-weight: 600;
 }
 
+.hot {
+    color: #00d2ff;
+    margin-top: 0;
+}
+
+.cool {
+    color: #ff6b6b;
+    margin-top: 0;
+}
+
+.bright {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.dim {
+    color: #888888;
+    margin-top: 0;
+}
+
+.near {
+    color: #5555ff;
+
+    margin-top: 0;
+}
+
+.far {
+    color: #00d2ff;
+    margin-top: 0;
+}
+
 
 span {
     display: inline-block;
@@ -122,4 +195,37 @@ button:active {
     font-size: 1.2rem;
     color: #fff;
     font-weight: 500;
+}
+
+.info-card {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.85rem;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.info-card h4 {
+    color: #00d2ff;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.info-card p {
+    color: #d0d0d0;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.info-card .note {
+    font-style: italic;
+    color: #a0a0a0;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
 }
