@@ -1,5 +1,5 @@
 🌟 Star Classifier - Giant vs Dwarf Stars       
-This project uses machine learning to classify stars as Giant or Dwarf based on key astronomical features.
+This project uses machine learning logistic regression model to classify stars as Giant or Dwarf based on key astronomical features.
 
 🔹 Features Used
 
@@ -9,7 +9,7 @@ Parallax (mas) - distance indicator
 
 🔹 How it Works
 
-1. A machine learning classifier is trained on real stellar data
+1. A machine learning logistic regression model is trained on real stellar data [Dataset](https://www.kaggle.com/datasets/vinesmsuic/star-categorization-giants-and-dwarfs)
 2. User inputs are collected through an interactive web interface
 3. The model predicts the star type along with confidence
 
@@ -21,7 +21,7 @@ HTML, CSS, JavaScript (frontend)
 
 🔹 Live Demo
 
-🔗 <your deployed link>
+🔗 <[Live Demo](https://star-classifer.onrender.com/)>
 
 🔹 Why this project?
 
