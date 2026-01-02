@@ -64,9 +64,12 @@ label {
     color: #a0a0a0;
     text-align: left;
     margin-bottom: 0.5rem;
-    position: relative;
     cursor: help;
     width: fit-content;
+}
+
+.input-group {
+    position: relative;
 }
 
 .tooltip-text {
@@ -80,7 +83,7 @@ label {
     padding: 10px;
     position: absolute;
     z-index: 100;
-    bottom: 125%;
+    bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -185,8 +188,7 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 .near {
-    color: #5555ff;
-
+    color: #8fd9ff;
     margin-top: 0;
 }
 

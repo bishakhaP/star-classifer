@@ -1,0 +1,28 @@
+🌟 Star Classifier - Giant vs Dwarf Stars       
+This project uses machine learning to classify stars as Giant or Dwarf based on key astronomical features.
+
+🔹 Features Used
+
+B–V Color Index - indicates stellar temperature     
+Absolute Magnitude (Amag) - intrinsic brightness    
+Parallax (mas) - distance indicator
+
+🔹 How it Works
+
+1. A machine learning classifier is trained on real stellar data
+2. User inputs are collected through an interactive web interface
+3. The model predicts the star type along with confidence
+
+🔹 Tech Stack
+
+Python, NumPy, Scikit-learn     
+FastAPI (backend)       
+HTML, CSS, JavaScript (frontend)
+
+🔹 Live Demo
+
+🔗 <your deployed link>
+
+🔹 Why this project?
+
+I built this project to combine my interest in astronomy with machine learning and to understand the full ML workflow from data analysis to deployment.
