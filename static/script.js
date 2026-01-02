@@ -24,6 +24,7 @@ window.onload = function () {
     plxSlider.oninput = () => {
         plxVal.innerText = plxSlider.value;
     };
+
 };
 
 function predict() {
@@ -44,11 +45,20 @@ function predict() {
     })
         .then(response => response.json())
         .then(result => {
-            const starType = result.class === 1 ? " Giant Star" : "Dwarf Star";
+            const isGiant = result.class === 1;
+            const starType = isGiant ? "Giant Star" : "Dwarf Star";
             const confidence = (result.probability[result.class] * 100).toFixed(2);
 
-            document.getElementById("result").innerText =
-                `${starType} (Confidence: ${confidence}%)`;
+            // Emoji size: Bigger for Giant, smaller for Dwarf
+            const starSize = isGiant ? "2rem" : "1.5rem";
+
+            document.getElementById("result").innerHTML = `
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <span style="font-size: ${starSize}; color: #ffd700; line-height: 1;">★</span>
+                    <span>${starType}</span>
+                </div>
+                <div class="confidence-text">Confidence: ${confidence}%</div>
+            `;
         })
         .catch(error => {
             console.error("Error:", error);
